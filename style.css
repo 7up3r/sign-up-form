@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#logoContainer {
+    width: 40vw;
+    background-color: yellowgreen;
+}
+
+#logoBackground {
+    margin-top: 24vh;
+    color: white;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.555);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#formContainer {
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: yellow;
+}
+
+#quote {
+    box-sizing: border-box;
+    background-color: blue;
+    border: black solid 5px;
+    height: calc(100vh/3);
+    padding-top: 35%;
+}
+
+#form {
+    background-color: beige;
+    border: white dotted 5px;
+    height: calc(100vh/3);
+}
+
+#submitButton {
+    box-sizing: border-box;
+    background-color: violet;
+    border: black solid 5px;
+    height: calc(100vh/3);
+    padding: 5% 5%;
+}
+
+#createAccount {
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin-bottom: 4%;
+    width: 30%;
+    height: 12%;
+}
+
