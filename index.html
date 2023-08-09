@@ -12,42 +12,91 @@
             <div class="logo">
                 <img src="./images/logo.png" height="80px" width="80px">
             </div>
-            <div class="text">
+            <div class="heading">
                 <h1>ONE PIECE</h1>
             </div> 
        </div>
     </div>
     <div class="conatiner" id="formContainer">
-        <div id="quote">
-            Are you ready to join Monkey D. Luffy and his crew on their quest for ONE PIECE?
-            <br>
-            "There Comes A Time When A Man Must Stand And Fight. And That Is When His Friends' Dreams Are Being Laughed At!"
+        <div id="sectionOne">
+            <div id="question">
+                Are you ready to join Monkey D. Luffy and his crew on their amazing quest for ONE PIECE? 
+                <br>
+                Sign up now to start the journey!
+            </div>
+            <div id="quote">"There Comes A Time When A Man Must Stand And Fight. <br>And That Is When His Friends' Dreams Are Being Laughed At!"</div>
         </div>
-        <div id="form">
-            <h3>Let's Join LUFFY!</h3>
-            <form action="#" method="get">
-                <label for="firstName">FIRST NAME</label>
-                <input type="text" id="firstName" placeholder="John">
-                <label for="lastName">LAST NAME</label>
-                <input type="text" id="lastName" placeholder="Doe">
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" placeholder="johndoe@gmail.com">
-                <label for="phoneNumber">PHONE NUMBER</label>
-                <input type="number" id="phoneNumber" placeholder="XXX-XXX-XXXX">
-                <label for="password">PASSWORD</label>
-                <input type="password" id="password">
-                <label for="confirmPassword">CONFIRM PASSWORD</label>
-                <input type="password" id="confirmPassword">
-    
-            </form>
+        <div id="sectionTwo">
+            <div id="formHeading">
+                <h3>Let's Join LUFFY!</h3>
+            </div>
+            <div>
+                <form action="#" method="get" id="userInput">
+                    
+                        <div class="left side">
+                            <div>
+                                <label for="firstName">FIRST NAME *</label>
+                                <br>
+                                <input type="text" id="firstName" placeholder="John" required>
+                            </div>
+                            <div>
+                                <label for="email">EMAIL *</label>
+                                <br>
+                                <input type="email" id="email" placeholder="johndoe@gmail.com" required>
+                            </div>
+                            <div>
+                                <label for="password">PASSWORD *</label>
+                                <br>
+                                <input type="password" id="password" required>
+                            </div>
+                        </div>
+
+                        <div class="right side">
+                            <div>
+                                <label for="lastName">LAST NAME *</label>
+                                <br>
+                                <input type="text" id="lastName" placeholder="Doe" required>
+                            </div>
+                            <div>
+                                <label for="phoneNumber">PHONE NUMBER</label>
+                                <br>
+                                <input type="number" id="phoneNumber" placeholder="XXX-XXX-XXXX">
+                            </div>
+                            <div>
+                                <label for="confirmPassword">CONFIRM PASSWORD *</label>
+                                <br>
+                                <input type="password" id="confirmPassword" required>
+                            </div>
+                        </div>
+                        <p id="passwordError">  </p>
+                </form>
+            </div>
         </div>
-        <div id="submitButton">
-            <button type="submit" id="createAccount"><b>CREATE ACCOUNT</b></button>
-            <br>
-            Already have an account?
-            <a href="">Log in</a>
+        <div id="sectionThree">
+            <button type="submit" id="createAccount" form="userInput" onclick="validateForm()"><b>CREATE ACCOUNT</b></button>
+            <div id="alreadyAccount">
+                Already have an account?
+                <a href="">Log in</a>
+            </div>
+            <p id="disclaimer">⚠This is not a real online service. No data is saved.</p>
         </div>
         
     </div>
+
+    <script>
+        function validateForm() {
+            let x = document.getElementById("password").value;
+            let y = document.getElementById("confirmPassword").value;
+            let text;
+            if (x == "" || y == "") {
+                text ="*Password or Confirm Password can't be empty"
+            } else if (x!==y) {
+                text = "*Passwords do not match"
+            } else {
+                text = "Signed up successfully"
+            }
+            document.getElementById("passwordError").innerHTML = text;
+        }
+    </script>
 </body>
 </html>

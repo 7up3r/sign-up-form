@@ -1,62 +1,136 @@
+@font-face {
+    font-family: norse;
+    src: url("./fonts/Norse-Bold.otf") format("opentype");
+    font-weight: bold;
+}
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    height: 70vh;
+    min-width: 100vw;
+    margin: 15vh 0 15vh 0;
+    background-color: black;
 }
 
 #logoContainer {
-    width: 40vw;
-    background-color: yellowgreen;
+    background-image: url("./images/background.png");
+    background-size: contain;
+    width: 37vw;
 }
 
 #logoBackground {
-    margin-top: 24vh;
-    color: white;
+    margin-top: 11vh;
+    color: black;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.555);
+    background-color: rgba(255, 245, 245, 0.888);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    font-family: norse;
+    font-size: x-large;
 }
 
 #formContainer {
-    width: 60vw;
-    height: 100vh;
+    width: 63vw;
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: yellow;
 }
 
+#sectionOne {
+    box-sizing: border-box;
+    background-color: #c5ced8;
+    flex: 1;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: left;
+}
+
+#question {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
 #quote {
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: norse;
+    font-size: 25px;
+}
+#sectionTwo {
     box-sizing: border-box;
-    background-color: blue;
-    border: black solid 5px;
-    height: calc(100vh/3);
-    padding-top: 35%;
+    background-color: #e9f1f0;
+    flex: 1;
 }
 
-#form {
-    background-color: beige;
-    border: white dotted 5px;
-    height: calc(100vh/3);
+#formHeading {
+    margin-left: 15px;
 }
 
-#submitButton {
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 15px 0px 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: 200px;
+    color: #413e3e;
+    font-style: oblique;
+}
+
+.side {
+    width: 50%;
+}
+
+.side>div {
+    margin-bottom: 5%;
+}
+
+#passwordError {
+    margin-top: -2%;
+    white-space: pre;
+    color: red;
+    font-size: small;
+}
+
+#sectionThree {
     box-sizing: border-box;
-    background-color: violet;
-    border: black solid 5px;
-    height: calc(100vh/3);
-    padding: 5% 5%;
+    flex: 1;
+    background-color: #c5ced8;
 }
 
 #createAccount {
+    margin: 15px;
     background-color: aliceblue;
     border-radius: 20px;
-    margin-bottom: 4%;
-    width: 30%;
-    height: 12%;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 0px;
+}
+
+#alreadyAccount {
+    margin: 15px;
+}
+
+#disclaimer {
+    background-color: white;
+    position: relative;
+    top: 50%;
+    text-align: center;
+}
+
+:focus {
+    border: 2px solid aliceblue;
+    box-shadow: 5px 5px 2px 1px rgba(46, 245, 19, 0.2);
+    
 }
 
