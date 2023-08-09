@@ -8,15 +8,17 @@ body {
     box-sizing: border-box;
     display: flex;
     height: 70vh;
-    min-width: 100vw;
-    margin: 15vh 0 15vh 0;
+    max-width: 100vw;
+    margin: 15vh auto 15vh auto;
     background-color: black;
+    max-width: 1250px;
 }
 
 #logoContainer {
     background-image: url("./images/peakpx\ \(1\).jpg");
     background-size: cover;
     width: 40vw;
+    max-width: 450px;
 }
 
 #logoBackground {
@@ -40,6 +42,8 @@ body {
     justify-content: center;
     background-color: yellow;
     background-image: url(./images/background2.jpg);
+    background-size: cover;
+    max-width: 680px;
 }
 
 #sectionOne {
