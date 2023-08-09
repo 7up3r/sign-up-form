@@ -31,7 +31,7 @@
                 <h3>Let's Join LUFFY!</h3>
             </div>
             <div>
-                <form action="#" method="get" id="userInput">
+                <form action="#" method="get" id="userInput" onsubmit="return validateForm()">
                     
                         <div class="left side">
                             <div>
@@ -60,7 +60,7 @@
                             <div>
                                 <label for="phoneNumber">PHONE NUMBER</label>
                                 <br>
-                                <input type="number" id="phoneNumber" placeholder="XXX-XXX-XXXX">
+                                <input type="number" id="phoneNumber" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="XXX-XXX-XXXX">
                             </div>
                             <div>
                                 <label for="confirmPassword">CONFIRM PASSWORD *</label>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div id="sectionThree">
-            <button type="submit" id="createAccount" form="userInput" onclick="validateForm()"><b>CREATE ACCOUNT</b></button>
+            <button type="submit" id="createAccount" form="userInput"><b>Sign up</b></button>
             <div id="alreadyAccount">
                 Already have an account?
                 <a href="">Log in</a>
